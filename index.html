@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Moez Ezzerelli</title>
-        <meta name="description" content="Personal portfolio site">
-        <meta name="author" content="Moez Ezzerelli">
-        <meta name="keywords" content="front-end, web, developer">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./resources/style.css">
-    </head>
-    <body>
-        
-        <header>
-            <h1>Moez Ezzerelli</h1>
-        </header>
 
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<head>
+    <meta charset="utf-8">
+    <title>Moez Ezzerelli</title>
+    <meta name="description" content="Personal portfolio site">
+    <meta name="author" content="Moez Ezzerelli">
+    <meta name="keywords" content="front-end, web, developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./resources/reset.css">
+    <link rel="stylesheet" href="./resources/style.css">
+</head>
 
-        <hr>
+<body>
 
-        <main>
-
-            <section id="about-me">
-                <h2>Front-End Developer</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eos ipsum a incidunt, ratione vel esse, consectetur itaque reiciendis, laudantium libero quo! Adipisci, unde placeat dignissimos error eveniet odit nulla!</p>
-                <figure>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TL4TMvS0UeC2vgUJVfnz8OAAuZdk8vaczWNVQgeU-A&s">
-                </figure>
-            </section>
-
-            <hr>
-
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius facere mollitia vero totam suscipit eos dolor fuga cum? Temporibus, error. Voluptatum minima sunt nostrum quae dignissimos error deleniti, odit incidunt.</p>
-                <figure>
-                    <img src="https://image.shutterstock.com/image-photo/image-260nw-1188713476.jpg">
-                </figure>
-            </section>
-
-            <hr>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <figure>
-                    <img src="https://image.shutterstock.com/image-photo/image-260nw-1921884809.jpg">
-                </figure>
-            </section>
+    <header>
+        <div class="title-nav">
+            <h1><a class="title" href="index.html">Moez Ezzerelli</a></h1>
             
-        </main>
-        
-        <hr>
+            <nav>
+                <ul>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <footer>
-            <div id="quote">"This is a quote." - Author</div>
-        </footer>
+        <div id="dark-mode" class= "prevent-select">
+            <a class="dm-button" id="moon">&#9789;</a>
+            <a class= "dm-button" id="sun">&#9788;</a>
+        </div>
 
-        <script src="./resources/script.js" async defer></script>
-    </body>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="about-me" class="flex-container">
+            
+            <div class="text">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eos ipsum a incidunt, ratione vel
+                    esse, consectetur itaque reiciendis, laudantium libero quo! Adipisci, unde placeat dignissimos error
+                    eveniet odit nulla!</p>
+            </div>
+
+            <div class="image">
+                <img class="me" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TL4TMvS0UeC2vgUJVfnz8OAAuZdk8vaczWNVQgeU-A&s">
+            </div>
+
+        </section>
+
+        <section id="projects" class="flex-container">
+            
+            <div class="text">
+                <h2>Projects</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius facere mollitia vero totam suscipit eos
+                dolor fuga cum? Temporibus, error. Voluptatum minima sunt nostrum quae dignissimos error deleniti, odit
+                incidunt.</p>
+            </div>
+            <div class="image">
+                <img src="./resources/images/htmlcssjs.png">
+            </div>
+
+        </section>
+
+        <section id="contact" class="flex-container">
+            <div class="text">
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius facere mollitia vero totam suscipit eos
+                dolor fuga cum? Temporibus, error. Voluptatum minima sunt nostrum quae dignissimos error deleniti, odit
+                incidunt.</p>
+            </div>
+            <div class="image">
+                <img src="./resources/images/contact.png">
+            </div>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <div id="quote"><span>"This is a quote." - Author</span></div>
+    </footer>
+
+    <script src="./resources/script.js" async defer></script>
+</body>
+
 </html>
