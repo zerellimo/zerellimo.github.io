@@ -10,7 +10,7 @@ moon.onclick = function() {
     document.body.style.color = "snow";
     document.getElementsByClassName("title")[0].style.color = "snow";
     document.getElementsByClassName("dm-button")[0].style.color = "black";
-    document.getElementsByClassName("dm-button")[0].style.backgroundColor = "snow";
+    document.getElementsByClassName("dm-button")[0].style.backgroundColor = "darkgoldenrod";
 }
 
 const sun = document.getElementById("sun");
@@ -21,7 +21,7 @@ sun.onclick = function() {
     document.getElementById("moon").style.display = "inline-block";
     document.body.style.color = "black";
     document.getElementsByClassName("title")[0].style.color = "black";
-    document.getElementsByClassName("dm-button")[0].style.color = "snow";
+    document.getElementsByClassName("dm-button")[0].style.color = "darkgoldenrod";
     document.getElementsByClassName("dm-button")[0].style.backgroundColor = "black";
 }
 

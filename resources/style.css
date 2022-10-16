@@ -8,9 +8,11 @@
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
 html {
     font-size: 62.5%;  /*root size is now 10px */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family:sans-serif;
 }
 
 body {
@@ -21,10 +23,12 @@ body {
 }
 
 h1 {
+    font-family: 'Racing Sans One', Georgia, serif;
     font-size: 3.2rem;
 }
 
 h2 {
+    font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.4rem;
     margin-bottom: 0.3rem;
 }
@@ -63,15 +67,14 @@ header {
 
 .title-nav {
     display: flex;
-    align-content: center;
-    align-items: center;
+    align-items:center;
     gap: 3rem;
 }
 
 @media (max-width: 550px) {
     .title-nav {
         flex-direction: column;
-        gap: 0.8rem
+        gap: 0.8rem;
     }
     
     header {
@@ -89,9 +92,10 @@ nav ul {
 }
 
 .dm-button {
-    color: white;
+    color: darkgoldenrod;
+    font-size: 2.0rem;
     background-color: black;
-    padding: 0.8rem;
+    padding: 0.6rem;
     border-radius: 0.8rem;
 }
 
