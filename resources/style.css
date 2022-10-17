@@ -179,14 +179,14 @@ main {
 }
 
 .image {
-    flex-basis: 10rem;
+    flex-basis: 20rem;
     flex-grow: 1;
     align-self: center;
 }
 
 .text {
-    flex-basis: 20rem;
-    flex-grow: 1;
+    flex-basis: 40rem;
+    flex-grow: 4;
 }
 
 .me {
