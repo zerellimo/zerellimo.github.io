@@ -29,29 +29,39 @@ h1 {
 h2 {
     font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.4rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
 }
 
 p {
     font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.35rem;
 }
 
 a {
     color:black;
-    text-decoration: none;
-}
-
-a:hover {
     text-decoration: underline;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 a:visited {
-    color: gray;
+    color:black
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+strong {
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
 }
 
 /* Body */
@@ -66,6 +76,15 @@ img {
 
 header {
     background-color: aquamarine;
+    margin-bottom: 2rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
 }
 
 .header-container {
@@ -149,6 +168,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+    padding-bottom: 2.5rem;
 }
 
 .flex-container {
@@ -171,6 +191,21 @@ main {
 
 .me {
     border-radius: 1rem;
+}
+
+.contact-list {
+    line-height: 2rem;
+    padding-left: 2rem;
+    padding-top: 0.8rem;
+    list-style-type: square;
+}
+
+#projects .image {
+    display: none;
+}
+
+#contact .image {
+    display: none;
 }
 
 /* --- Footer --- */
