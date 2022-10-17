@@ -17,7 +17,6 @@ html {
 
 body {
     font-size: 1.6rem;
-    padding: 0.8rem;
     background-color: snow;
     color: black;
 }
@@ -55,30 +54,43 @@ img {
     height: auto;
 }
 
+/* Body */
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% of viewport */
+}
+
 /* Header and navigation */
 
 header {
+    background-color: aquamarine;
+}
+
+.header-container {
     margin: 0 auto;
+    padding: 0.8rem;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 800px;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.8rem;
 }
 
-.title-nav {
-    display: flex;
-    align-items:center;
-    gap: 3rem;
+#dark-mode {
+    margin-left: auto;
 }
 
-@media (max-width: 550px) {
-    .title-nav {
+
+@media (max-width: 500px) {
+    .header-container {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
     }
-    
-    header {
-        flex-direction: column;
+
+    #dark-mode {
+        margin-left: 0;
     }
 }
 
@@ -128,13 +140,18 @@ nav ul {
 
 /* Main */
 
-section {
-    min-width: 30rem;
-    margin-bottom: 2rem;
+main {
+    max-width:800px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 2rem;
 }
@@ -157,7 +174,16 @@ section {
 /* --- Footer --- */
 
 footer {
+    background-color: aquamarine;
+    margin-top: auto;
+    display: flex;
+    min-height:fit-content;
+    align-items: center;
+}
+
+.footer-container {
     margin: 0 auto;
+    padding: 0.8rem;
 }
 
 #quote {

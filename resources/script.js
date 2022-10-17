@@ -8,7 +8,8 @@ moon.onclick = function() {
     document.getElementById("moon").style.display = "none";
     document.getElementById("sun").style.display = "inline-block";
     document.body.style.color = "snow";
-    document.getElementsByClassName("title")[0].style.color = "snow";
+    document.getElementsByClassName("title")[0].style.color = "black";
+    document.getElementById("quote").style.color = "black";
     document.getElementsByClassName("dm-button")[0].style.color = "black";
     document.getElementsByClassName("dm-button")[0].style.backgroundColor = "darkgoldenrod";
 }
@@ -21,6 +22,7 @@ sun.onclick = function() {
     document.getElementById("moon").style.display = "inline-block";
     document.body.style.color = "black";
     document.getElementsByClassName("title")[0].style.color = "black";
+    document.getElementById("quote").style.color = "black";
     document.getElementsByClassName("dm-button")[0].style.color = "darkgoldenrod";
     document.getElementsByClassName("dm-button")[0].style.backgroundColor = "black";
 }
