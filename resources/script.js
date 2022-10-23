@@ -1,37 +1,52 @@
+// Dark-Mode / Light-Mode 
 
-// Dark mode
+let r = document.querySelector(':root');
+let sun = document.getElementById("sun");
+let moon = document.getElementById("moon");
 
-const moon = document.getElementById("moon");
-
-moon.onclick = function() {
-    document.body.style.backgroundColor = "rgb(33,33,36)";
-    document.getElementById("moon").style.display = "none";
-    document.getElementById("sun").style.display = "inline-block";
-    document.body.style.color = "snow";
-    document.getElementsByClassName("external-link")[0].style.color = "snow";
-    document.getElementsByClassName("external-link")[1].style.color = "snow";
-    document.getElementsByClassName("download-link")[0].style.color = "snow";
-    document.getElementsByClassName("title")[0].style.color = "black";
-    document.getElementById("quote").style.color = "black";
-    document.getElementsByClassName("dm-button")[0].style.color = "black";
-    document.getElementsByClassName("dm-button")[0].style.backgroundColor = "darkgoldenrod";
+const setDarkMode = function () {
+    r.style.setProperty('--main-backgroundColor', "rgb(33,33,36)");
+    r.style.setProperty('--main-color', 'snow');
+    moon.style.display = "none";
+    sun.style.display = "inline-block";
 }
 
-const sun = document.getElementById("sun");
-
-sun.onclick = function() {
-    document.body.style.backgroundColor = "snow";
-    document.getElementById("sun").style.display = "none";
-    document.getElementById("moon").style.display = "inline-block";
-    document.body.style.color = "black";
-    document.getElementsByClassName("external-link")[0].style.color = "black";
-    document.getElementsByClassName("external-link")[1].style.color = "black";
-    document.getElementsByClassName("download-link")[0].style.color = "black";
-    document.getElementsByClassName("title")[0].style.color = "black";
-    document.getElementById("quote").style.color = "black";
-    document.getElementsByClassName("dm-button")[0].style.color = "darkgoldenrod";
-    document.getElementsByClassName("dm-button")[0].style.backgroundColor = "black";
+const setLightMode = function () {
+    r.style.setProperty('--main-backgroundColor', 'snow');
+    r.style.setProperty('--main-color', 'black');
+    moon.style.display = "inline-block";
+    sun.style.display = "none";
 }
+
+// Auto Dark-Mode (device preference)
+
+// check preference 
+const darkModeSetByUser = window.matchMedia('(prefers-color-scheme: dark)')
+
+// set mode accordingly (initial page load)
+if (darkModeSetByUser) {
+    setDarkMode();
+} else {
+    setLightMode();
+}
+
+// reset mode if device preference changes
+darkModeSetByUser.onchange = (e) => {
+
+    if (e.matches) {
+        setDarkMode();
+        
+    } else {
+        setLightMode();
+    }
+
+}
+
+// Manual Dark-Mode (user click on button)
+
+moon.onclick = setDarkMode;
+sun.onclick = setLightMode;
+
 
 // Footer quote
 
