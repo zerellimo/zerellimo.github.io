@@ -1,4 +1,4 @@
-// Dark-Mode / Light-Mode 
+// Dark-Mode / Light-Mode
 
 let r = document.querySelector(':root');
 let sun = document.getElementById("sun");
@@ -19,31 +19,14 @@ const setLightMode = function () {
 }
 
 // Auto Dark-Mode (device preference)
-
-// check preference 
-const darkModeSetByUser = window.matchMedia('(prefers-color-scheme: dark)')
-
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)'); // matchMedia method returns a MediaQueryList Object
+const darkModeSetByUser = darkModeMediaQuery.matches; // matches is one of the MediaQueryList Object properties - true if the document matches the query, otherwise false.
 // set mode accordingly (initial page load)
-if (darkModeSetByUser) {
-    setDarkMode();
-} else {
-    setLightMode();
-}
-
+darkModeSetByUser? setDarkMode():setLightMode(); 
 // reset mode if device preference changes
-darkModeSetByUser.onchange = (e) => {
-
-    if (e.matches) {
-        setDarkMode();
-        
-    } else {
-        setLightMode();
-    }
-
-}
+darkModeMediaQuery.onchange = (event) => event.matches? setDarkMode():setLightMode(); // event is a MediaQueryListEvent object, it stores information on the changes that have happened to a MediaQueryList object — instances are available as the event object on a function referenced by a change event.
 
 // Manual Dark-Mode (user click on button)
-
 moon.onclick = setDarkMode;
 sun.onclick = setLightMode;
 
