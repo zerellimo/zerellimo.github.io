@@ -13,6 +13,13 @@
 :root {
     --main-color: black;
     --main-backgroundColor: snow;
+    --emphasis-color: aquamarine;
+    
+    /*
+    --emphasis-color: #ffd47f;
+    --triadic-color-1: aquamarine;
+    --triadic-color-2: #d47fff;
+    */
 }
 
 html {
@@ -80,7 +87,7 @@ i {
 /* Header and navigation */
 
 header {
-    background-color: aquamarine;
+    background-color: var(--emphasis-color);
     margin-bottom: 2rem;
 }
 
@@ -124,7 +131,7 @@ nav ul {
 }
 
 .dm-button {
-    color: darkgoldenrod;
+    color: peru;
     font-size: 2.0rem;
     background-color: black;
     padding: 0.6rem;
@@ -207,11 +214,17 @@ main {
     border-radius: 1rem;
 }
 
-.contact-list {
+.list-level-1 {
     line-height: 2rem;
+    padding-left: 1.8rem;
+    list-style-type: disc;
+    margin-bottom: 0.35rem;
+}
+
+.list-level-2 {
     padding-left: 2rem;
-    padding-top: 0.8rem;
     list-style-type: square;
+    margin-bottom: 0.35rem;
 }
 
 #projects .image {
@@ -233,7 +246,7 @@ main {
 /* --- Footer --- */
 
 footer {
-    background-color: aquamarine;
+    background-color: var(--emphasis-color);
     margin-top: auto;
     display: flex;
     min-height:fit-content;
