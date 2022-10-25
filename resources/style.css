@@ -109,8 +109,10 @@ header a:visited {
     color: var(--emphasis-color-2);
 }
 
-header a:hover{
-    color: white;
+@media (hover:hover) {
+    header a:hover {
+        color: white;
+    }
 }
 
 .header-container {
