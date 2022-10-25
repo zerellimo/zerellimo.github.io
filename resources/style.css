@@ -11,15 +11,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
 :root {
+
+    /* Color Palette */
+
+    --dark-color-1: rgb(22,22,24);
+    --dark-color-2: rgb(33, 33, 36);
+    --dark-color-3: rgb(129,129,129);
+
+    --header-footer-color: white;
+    --header-footer-backgroundColor: black;
+
     --main-color: black;
-    --main-backgroundColor: snow;
-    --emphasis-color: aquamarine;
-    
-    /*
-    --emphasis-color: #ffd47f;
-    --triadic-color-1: aquamarine;
-    --triadic-color-2: #d47fff;
-    */
+    --main-backgroundColor: white;
+
+    --emphasis-color-1: peru;
+    --emphasis-color-2: #3fcdc8;
+    --emphasis-color-3: #833fcd;
+
 }
 
 html {
@@ -53,6 +61,7 @@ p {
 a {
     color: var(--main-color);
     text-decoration: underline;
+    text-decoration-color: var(--emphasis-color-2);
 }
 
 a:hover {
@@ -87,21 +96,21 @@ i {
 /* Header and navigation */
 
 header {
-    background-color: var(--emphasis-color);
+    background-color: var(--header-footer-backgroundColor);
     margin-bottom: 2rem;
 }
 
 header a {
     text-decoration: none;
-    color: black;
+    color: var(--emphasis-color-2);
 }
 
 header a:visited {
-    color: black;
+    color: var(--emphasis-color-2);
 }
 
 header a:hover{
-    text-decoration: underline;
+    color: white;
 }
 
 .header-container {
@@ -131,11 +140,12 @@ nav ul {
 }
 
 .dm-button {
-    color: peru;
-    font-size: 2.0rem;
-    background-color: black;
-    padding: 0.6rem;
+    font-size: 1.8rem;
+    padding: 0.4rem;
     border-radius: 0.8rem;
+    color: peru;
+    background-color: black;
+    border: 0.1rem solid peru;
 }
 
 .dm-button:hover {
@@ -158,7 +168,7 @@ nav ul {
 }
 
 .title {
-    color: black;
+    color: var(--header-footer-color);
 }
 
 .title:hover {
@@ -166,7 +176,7 @@ nav ul {
 }
 
 .title:visited {
-    color: black;
+    color: var(--header-footer-color);
 }
 
 @media (max-width: 500px) {
@@ -235,18 +245,10 @@ main {
     display: none;
 }
 
-.external-link {
-    color: var(--main-color);
-}
-
-.download-link {
-    color: var(--main-color);
-}
-
 /* --- Footer --- */
 
 footer {
-    background-color: var(--emphasis-color);
+    background-color: var(--header-footer-backgroundColor);
     margin-top: auto;
     display: flex;
     min-height:fit-content;
@@ -261,5 +263,5 @@ footer {
 #quote {
     font-size: 1.2rem;
     font-style: italic;
-    color: black;
+    color: var(--header-footer-color);
 }

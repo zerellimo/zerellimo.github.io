@@ -6,13 +6,13 @@ let moon = document.getElementById("moon");
 
 const setDarkMode = function () {
     r.style.setProperty('--main-backgroundColor', "rgb(33,33,36)");
-    r.style.setProperty('--main-color', 'snow');
+    r.style.setProperty('--main-color', 'white');
     moon.style.display = "none";
     sun.style.display = "inline-block";
 }
 
 const setLightMode = function () {
-    r.style.setProperty('--main-backgroundColor', 'snow');
+    r.style.setProperty('--main-backgroundColor', 'white');
     r.style.setProperty('--main-color', 'black');
     moon.style.display = "inline-block";
     sun.style.display = "none";
