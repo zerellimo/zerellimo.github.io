@@ -1,6 +1,6 @@
 // Dark-Mode / Light-Mode
 
-export const darkMode = () => {
+export default function darkMode() {
     let r = document.querySelector(':root');
     let sun = document.getElementById("sun");
     let moon = document.getElementById("moon");
@@ -31,5 +31,3 @@ export const darkMode = () => {
     moon.onclick = setDarkMode;
     sun.onclick = setLightMode;
 }
-
-export default darkMode;

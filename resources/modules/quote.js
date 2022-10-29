@@ -1,6 +1,6 @@
 // Footer quote
 
-export const footerQuote = () => {
+export default function footerQuote() {
     let quotes = [
         {
             quote: "It has become appallingly obvious that our technology has exceeded our humanity",
@@ -20,5 +20,3 @@ export const footerQuote = () => {
     let randomQuote = Math.floor((Math.random())*quotes.length);
     document.getElementById("quote").innerHTML = [`"${quotes[randomQuote].quote}." &#8212; ${quotes[randomQuote].author}`];
 }
-
-export default footerQuote;
