@@ -18,7 +18,7 @@
     --dark-color-2: rgb(33, 33, 36);
     --dark-color-3: rgb(129,129,129);
 
-    --header-footer-color: white;
+    --header-footer-color: lightgray;
     --header-footer-backgroundColor: black;
 
     --main-color: black;
@@ -33,12 +33,15 @@
 html {
     font-size: 62.5%;  /*root size is now 10px */
     font-family:sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 body {
     font-size: 1.6rem;
     background-color: var(--main-backgroundColor);
     color: var(--main-color);
+    --max-width: 65rem;
+    --line-height: 2rem;
 }
 
 h1 {
@@ -49,19 +52,19 @@ h1 {
 h2 {
     font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.4rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.0rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 p {
     font-size: 1.6rem;
-    line-height: 2rem;
-    margin-bottom: 0.35rem;
+    line-height: var(--line-height);
+    margin-bottom: 0.7rem;
 }
 
 a {
@@ -91,6 +94,15 @@ i {
     font-style: italic;
 }
 
+li {
+    line-height: var(--line-height);
+    margin-top: 0.7rem;
+}
+
+ul {
+    margin-bottom: 0.7rem;
+}
+
 /* Body */
 
 .body-container {
@@ -104,15 +116,16 @@ i {
 header {
     background-color: var(--header-footer-backgroundColor);
     margin-bottom: 2rem;
+    
 }
 
 header a {
     text-decoration: none;
-    color: var(--emphasis-color-2);
+    color: var(--header-footer-color);
 }
 
 header a:visited {
-    color: var(--emphasis-color-2);
+    color: var(--header-footer-color);
 }
 
 @media (hover:hover) {
@@ -123,13 +136,14 @@ header a:visited {
 
 .header-container {
     margin: 0 auto;
-    padding: 0.8rem;
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 800px;
+    max-width: var(--max-width);
     align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -203,7 +217,7 @@ nav ul {
 /* Main */
 
 main {
-    max-width:800px;
+    max-width: var(--max-width);
     padding: 1rem;
     margin: 0 auto;
     display: flex;
@@ -226,8 +240,8 @@ main {
 }
 
 .text {
-    flex-basis: 40rem;
-    flex-grow: 4;
+    flex-basis: 32rem;
+    flex-grow: 3;
 }
 
 .me {
@@ -235,16 +249,13 @@ main {
 }
 
 .list-level-1 {
-    line-height: 2rem;
     padding-left: 1.8rem;
     list-style-type: disc;
-    margin-bottom: 0.35rem;
 }
 
 .list-level-2 {
     padding-left: 2rem;
     list-style-type: square;
-    margin-bottom: 0.35rem;
 }
 
 #projects .image {

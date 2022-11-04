@@ -7,7 +7,7 @@ export default function darkMode() {
 
     const setDarkMode = function () {
         r.style.setProperty('--main-backgroundColor', "rgb(33,33,36)");
-        r.style.setProperty('--main-color', 'white');
+        r.style.setProperty('--main-color', 'lightgray');
         moon.style.display = "none";
         sun.style.display = "inline-block";
     }
