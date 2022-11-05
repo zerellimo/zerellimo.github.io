@@ -42,6 +42,7 @@ body {
     color: var(--main-color);
     --max-width: 65rem;
     --line-height: 2rem;
+    --padding : 1.5rem
 }
 
 h1 {
@@ -136,7 +137,7 @@ header a:visited {
 
 .header-container {
     margin: 0 auto;
-    padding: 1rem;
+    padding: var(--padding);
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -218,7 +219,7 @@ nav ul {
 
 main {
     max-width: var(--max-width);
-    padding: 1rem;
+    padding: var(--padding);
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -278,7 +279,7 @@ footer {
 
 .footer-container {
     margin: 0 auto;
-    padding: 0.8rem;
+    padding: var(--padding);
 }
 
 #quote {
