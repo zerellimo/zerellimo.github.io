@@ -74,8 +74,10 @@ a {
     text-decoration-color: var(--emphasis-color-2);
 }
 
-a:hover {
-    text-decoration: none;
+@media (hover:hover) {
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 a:visited {
