@@ -28,6 +28,9 @@
     --emphasis-color-2: #3fcdc8;
     --emphasis-color-3: #833fcd;
 
+    --sun-display: none;
+    --moon-display: inline-block;
+
 }
 
 html {
@@ -187,11 +190,11 @@ nav ul {
   }
 
 #sun {
-    display: none;
+    display: var(--sun-display);
 }
 
 #moon {
-    display: inline-block;
+    display: var(--moon-display);
 }
 
 .title {
@@ -220,13 +223,15 @@ nav ul {
 /* Main */
 
 main {
-    max-width: var(--max-width);
+    justify-content: center;
     padding: var(--padding);
-    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     gap: 3rem;
     padding-bottom: 2.5rem;
+}
+    
+section {
+    flex-basis: var(--max-width);
 }
 
 .flex-container {
@@ -269,6 +274,10 @@ main {
     display: none;
 }
 
+#banner-quote {
+    color: var(--main-color)
+}
+
 /* --- Footer --- */
 
 footer {
@@ -288,4 +297,5 @@ footer {
     font-size: 1.2rem;
     font-style: italic;
     color: var(--header-footer-color);
+    display: none;
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Moez Ezzerelli</title>
+    <meta name="description" content="Personal portfolio site">
+    <meta name="author" content="Moez Ezzerelli">
+    <meta name="keywords" content="front-end, web, developer">
+    <meta name="google-site-verification" content="mdPJFcDPCmVzkvxmE4E_adMBxSr-4GlpKvZhatxwH14" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./resources/reset.css">
+    <link rel="stylesheet" href="./resources/style.css">
+    <script type="module" src="./resources/modules/dark.js"></script>
+</head>
+
+<body>
+
+    <div class="body-container">
+
+        <header>
+
+            <div class="header-container">
+    
+                <h1><a class="title" href="/">Moez Ezzerelli</a></h1>
+                
+                <nav>
+
+                    <ul>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./about-me.html">About Me</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+
+                    <div id="dark-mode" class= "prevent-select">
+                        <a class="dm-button" id="moon">&#9789;</a>
+                        <a class= "dm-button" id="sun">&#9788;</a>
+                    </div>
+
+                </nav>
+
+            </div>
+                
+        </header>
+
+        <main>
+
+            <section id="projects">
+
+                <h2>Projects</h2>
+
+                <div class="flex-container">
+
+                    <div class="text">
+                        
+                        <p>As part of my <i><a target="_blank" href="https://www.codecademy.com/profiles/zerellimo">Codecademy Front-End Engineer Career Path.</a></i></p>
+                        
+                        <br>
+
+                        <article>
+                            <h3>zerellimo.github.io</h3>
+                            <p>Portfolio website built in vanilla <strong>HTML/CSS/JS</strong>.</p>
+                            <p>Key features:</p>
+                            <ul class="list-level-1">
+                                <li><strong>Responsive design</strong>
+                                    <ul class="list-level-2">
+                                        <li>Layout: optimized for mobile and desktop</li>
+                                        <li>Colors: dark mode based on device preference + manual toggle</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Interactive content</strong>
+                                    <ul class="list-level-2">
+                                        <li>Footer: quote fetched from <i>Zen Quotes API</i> and displayed randomly on page load</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>Source code: <a class="external-link" target="_blank" href="https://github.com/zerellimo/zerellimo.github.io">GitHub</a></p>
+                        </article>
+
+                        <br>
+    
+                        <article>
+                            <h3>Find Your Hat</h3>
+                            <p>A node terminal maze-solving game.</p>
+                            <p>Main takeaways:</p>
+                            <ul class="list-level-1">
+                                <li>Implemented the game mechanics using JavaScript classes and methods.</li>
+                                <li>Wrote basic unit tests to verify the code within Mocha, a popular JavaScript testing framework.</li>
+                                <li>Published as an npm package, an industry standard workflow.</li>
+                            </ul>
+                            <p>Source code: <a class="external-link" target="_blank" href="https://github.com/zerellimo/FindYourHat">GitHub</a></p>
+                            <p>Package: <a class="external-link" target="_blank" href="https://www.npmjs.com/package/@zerellimo/findyourhat">npm</a></p>
+                        </article>
+                        
+                    </div>
+
+                    <div class="image">
+                        <img src="./resources/images/htmlcssjs.png">
+                    </div>
+        
+                </div>
+                
+            </section>
+    
+        </main>
+    
+        <footer>
+            <div class="footer-container">
+                <div><span id="quote">"This is a quote." - Author</span></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="module" src="./resources/script.js" async defer></script>
+
+</body>
+
+</html>
