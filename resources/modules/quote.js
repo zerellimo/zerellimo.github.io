@@ -57,7 +57,7 @@ export default function footerQuote() {
 
         let quoteElement = document.getElementById("quote");
         let randomNumber = Math.floor(Math.random()*list.length);
-        quoteElement.innerHTML = [`"${list[randomNumber].quote}" <br> &#8212; ${list[randomNumber].author}`];
+        quoteElement.innerHTML = [`"${list[randomNumber].quote}" <br> <br> &#8212; ${list[randomNumber].author}`];
         quoteElement.style.display = "inline";
         
     }

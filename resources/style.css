@@ -9,7 +9,7 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
 :root {
 
     /* Color Palette */
@@ -274,8 +274,19 @@ section {
     display: none;
 }
 
-#banner-quote {
-    color: var(--main-color)
+.banner-quote {
+    color: var(--main-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+    display: none;
 }
 
 /* --- Footer --- */
@@ -291,13 +302,18 @@ footer {
 .footer-container {
     margin: 0 auto;
     padding: var(--padding);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     max-width: var(--max-width);
-    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10rem;
+    flex-direction: row;
 }
 
-#quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--header-footer-color);
-    display: none;
+.external-logo {
+    height: 2rem;
+    width: auto;
 }
