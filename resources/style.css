@@ -122,7 +122,10 @@ ul {
 header {
     background-color: var(--header-footer-backgroundColor);
     margin-bottom: 2rem;
-    
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-width: 32rem;
 }
 
 header a {
@@ -209,14 +212,30 @@ nav ul {
     color: var(--header-footer-color);
 }
 
-@media (max-width: 500px) {
+.title-mobile {
+    display: none;
+}
+
+@media (max-width: 515px) {
     .header-container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    nav ul {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .title-mobile {
+        display: inline;
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
