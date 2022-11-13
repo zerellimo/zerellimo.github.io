@@ -20,7 +20,7 @@ export default function footerQuote() {
     
     const getQuotes = async () => {
         try {
-            let response = await fetch("https://zenquotes.io/api/quotes");
+            let response = await fetch("https://zenquotes.io/api/quotes/");
             if (response.ok) {
                 const res = await response.json();
                 let storedQuotes = localStorage.getItem("quotes"); 
