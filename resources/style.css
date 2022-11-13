@@ -291,6 +291,8 @@ footer {
 .footer-container {
     margin: 0 auto;
     padding: var(--padding);
+    max-width: var(--max-width);
+    text-align: center;
 }
 
 #quote {
