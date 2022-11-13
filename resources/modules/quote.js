@@ -20,10 +20,8 @@ export default function footerQuote() {
 
     const readOnlyAPIKey = '0AzTKB2z8fr8I8vVDtS3mQ==e2mUIilqydwiojy7';
     const endPoint = 'https://api.api-ninjas.com/v1/quotes'
-    const requestParams = '?limit=10';
+    const requestParams = '?category=computers&limit=10';
     const urlToFetch = endPoint + requestParams;
-
-    let storedQuotes = localStorage.getItem("quotes"); 
     
     const getQuotes = async () => {
         try {
@@ -39,18 +37,13 @@ export default function footerQuote() {
             if (response.ok) {
 
                 const res = await response.json();
-
-                if(localStorage.getItem("quotes")!= null) {
-                    display1Quote(JSON.parse(storedQuotes))
-                } else if (!res) {
+                
+                if (!res) {
                     // console.log('not resolved');
                     display1Quote(sampleQuotes);
                 } else {
                     // console.log(res);
-                    // saving fetched quotes in localStorage due to API limits 
-                    localStorage.setItem("quotes", JSON.stringify(res)); // local storage does not work with js objects -> convert to string then (re)parse
-                    storedQuotes = localStorage.getItem("quotes");
-                    display1Quote(JSON.parse(storedQuotes));
+                    display1Quote(res);
                 }
             }
         } catch (error) {
