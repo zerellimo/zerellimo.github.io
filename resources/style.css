@@ -322,17 +322,14 @@ footer {
     margin: 0 auto;
     padding: var(--padding);
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     max-width: var(--max-width);
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 10rem;
+    min-height: 3.5rem;
     flex-direction: row;
+    align-items:center;
 }
 
 .external-logo {
-    height: 2rem;
+    height: 2.5rem;
     width: auto;
 }
