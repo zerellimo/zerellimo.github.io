@@ -31,8 +31,8 @@
     --sun-display: none;
     --moon-display: inline-block;
 
-    --lightLogo-display: none;
-    --darkLogo-display: inline;
+    --lightLogo-display: inline;
+    --darkLogo-display: none;
 
     --article-backgroundColor: rgb(232, 232, 232);
     --article-backgroundColor: var(--dark-color-1);
