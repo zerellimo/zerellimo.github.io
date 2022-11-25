@@ -8,6 +8,10 @@ export const setDarkMode = function () {
     r.style.setProperty('--main-color', 'lightgray');
     r.style.setProperty('--moon-display', 'none');
     r.style.setProperty('--sun-display', 'inline-block');
+    r.style.setProperty('--darkLogo-display', 'inline');
+    r.style.setProperty('--lightLogo-display', 'none');
+    r.style.setProperty('--article-color', "lightgray");
+    r.style.setProperty('--article-backgroundColor', 'rgb(22,22,24)');
     let theme = localStorage.getItem("theme");
     localStorage.setItem("theme", "dark");
 }
@@ -18,6 +22,10 @@ export const setLightMode = function () {
     r.style.setProperty('--main-color', 'black');
     r.style.setProperty('--moon-display', 'inline-block');
     r.style.setProperty('--sun-display', 'none');
+    r.style.setProperty('--darkLogo-display', 'none');
+    r.style.setProperty('--lightLogo-display', 'inline');
+    r.style.setProperty('--article-color', "black");
+    r.style.setProperty('--article-backgroundColor', 'rgb(232, 232, 232)');
     let theme = localStorage.getItem("theme");
     localStorage.setItem("theme", "light");
 }

@@ -31,6 +31,12 @@
     --sun-display: none;
     --moon-display: inline-block;
 
+    --lightLogo-display: none;
+    --darkLogo-display: inline;
+
+    --article-backgroundColor: rgb(232, 232, 232);
+    --article-backgroundColor: var(--dark-color-1);
+
 }
 
 html {
@@ -120,26 +126,28 @@ ul {
 /* Header and navigation */
 
 header {
-    background-color: var(--header-footer-backgroundColor);
+    background-color: var(--main-backgroundColor);
     margin-bottom: 2rem;
     position: sticky;
     top: 0;
     z-index: 10;
     min-width: 32rem;
+    border-bottom: 0.01rem solid black;
 }
 
 header a {
     text-decoration: none;
-    color: var(--header-footer-color);
+    color: var(--main-color);
 }
 
 header a:visited {
-    color: var(--header-footer-color);
+    color: var(--main-color);
 }
 
 @media (hover:hover) {
     header a:hover {
-        color: white;
+        text-decoration: none;
+        color: var(--emphasis-color-2);
     }
 }
 
@@ -173,17 +181,16 @@ nav ul {
 .dm-button {
     font-size: 1.8rem;
     padding: 0.5rem;
-    border-radius: 1.5rem;
-    color: var(--emphasis-color-1);
-    background-color: black;
-    border: 0.1rem solid var(--emphasis-color-1);
+    border: 0.1rem solid var(--main-color);
+    border-radius: 2rem;
 }
 
 .dm-button:hover {
     cursor: pointer;
     text-decoration: none;
-    color: var(--emphasis-color-1);
-    border-color: var(--emphasis-color-1);
+    background-color: var(--main-color);
+    color: var(--main-backgroundColor);
+    transition: ease-out 0.5s;
 }
 
 .prevent-select {
@@ -200,16 +207,16 @@ nav ul {
     display: var(--moon-display);
 }
 
-.title {
-    color: var(--header-footer-color);
+.title a {
+    color: var(--main-color);
 }
 
-.title:hover {
+.title a:hover {
     text-decoration: none;
 }
 
-.title:visited {
-    color: var(--header-footer-color);
+.title a:visited {
+    color: var(--main-color);
 }
 
 .title-mobile {
@@ -272,7 +279,13 @@ section {
 }
 
 .me {
-    border-radius: 1rem;
+    border-radius: 2rem;
+}
+
+article, .frame {
+    background-color: var(--article-backgroundColor);
+    padding: var(--padding);
+    border-radius: 1.5rem;
 }
 
 .list-level-1 {
@@ -311,7 +324,7 @@ section {
 /* --- Footer --- */
 
 footer {
-    background-color: var(--header-footer-backgroundColor);
+    background-color: var(--main-backgroundColor);
     margin-top: auto;
     display: flex;
     min-height:fit-content;
@@ -327,9 +340,18 @@ footer {
     min-height: 3.5rem;
     flex-direction: row;
     align-items:center;
+    border-top: 0.01rem solid black;
 }
 
 .external-logo {
     height: 2.5rem;
     width: auto;
+}
+
+.GitHubLight {
+    display: var(--lightLogo-display);
+}
+
+.GitHubDark {
+    display: var(--darkLogo-display);
 }
