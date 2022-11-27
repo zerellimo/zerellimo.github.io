@@ -121,6 +121,7 @@ ul {
     display: flex;
     flex-direction: column;
     min-height: 100svh; /* 100% of viewport (s for small as in smallest initial height, better for mobile ui */
+    background-color: var(--article-backgroundColor);
 }
 
 /* Header and navigation */
@@ -258,6 +259,9 @@ main {
     
 section {
     flex-basis: var(--max-width);
+    padding: var(--padding);
+    background-color: var(--main-backgroundColor);
+    border-radius: 2rem;
 }
 
 .flex-container {
@@ -279,7 +283,7 @@ section {
 }
 
 .me {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
 }
 
 article, .frame {
@@ -340,7 +344,7 @@ footer {
     min-height: 3.5rem;
     flex-direction: row;
     align-items:center;
-    border-top: 0.01rem solid black;
+    /*border-top: 0.01rem solid black;*/
 }
 
 .external-logo {
