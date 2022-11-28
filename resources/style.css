@@ -121,8 +121,14 @@ ul {
 .body-container {
     display: flex;
     flex-direction: column;
-    min-height: 100svh; /* 100% of viewport (s for small as in smallest initial height, better for mobile ui */
+    min-height: 100vh; /* 100% of viewport */
     background-color: var(--body-backgroundColor);
+}
+
+@media (max-width:515px) {
+    .body-container {
+        min-height: 100svh; /* 100% of viewport (s for small as in smallest initial height, better for mobile ui */
+    }
 }
 
 /* Header and navigation */
