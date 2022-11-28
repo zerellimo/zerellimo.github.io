@@ -34,8 +34,7 @@
     --lightLogo-display: inline;
     --darkLogo-display: none;
 
-    --article-backgroundColor: rgb(232, 232, 232);
-    --article-backgroundColor: var(--dark-color-1);
+    --body-backgroundColor: rgb(232, 232, 232);
 
 }
 
@@ -123,7 +122,7 @@ ul {
     display: flex;
     flex-direction: column;
     min-height: 100svh; /* 100% of viewport (s for small as in smallest initial height, better for mobile ui */
-    background-color: var(--article-backgroundColor);
+    background-color: var(--body-backgroundColor);
 }
 
 /* Header and navigation */
