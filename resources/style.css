@@ -135,7 +135,7 @@ ul {
 
 header {
     background-color: var(--main-backgroundColor);
-    margin-bottom: 2rem;
+    margin-bottom: var(--padding);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -186,22 +186,23 @@ nav ul {
 }
 
 .dm-button {
-    background-color: var(--main-backgroundColor);
+    background-color: var(--body-backgroundColor);
     color: var(--main-color);
-    font-size: 1.8rem;
-    border: 0.1rem solid var(--main-color);
+    font-size: 1.4rem;
+    border: transparent;
     border-radius: 1.5rem;
-    height: 3.5rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
 }
 
-.dm-button:hover {
-    cursor: pointer;
-    text-decoration: none;
-    background-color: var(--main-color);
-    color: var(--main-backgroundColor);
-    transition: ease-out 0.5s;
+@media (hover:hover) {
+
+    .dm-button:hover {
+        cursor: pointer;
+    }
 }
+
+
 
 .prevent-select {
     -webkit-user-select: none; /* Safari */
@@ -269,10 +270,9 @@ nav ul {
 
 main {
     justify-content: center;
-    padding: var(--padding);
     display: flex;
     gap: 3rem;
-    padding-bottom: 2.5rem;
+    padding: 0 var(--padding) var(--padding) var(--padding);
 }
     
 section {
