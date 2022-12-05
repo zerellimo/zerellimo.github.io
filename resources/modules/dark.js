@@ -7,7 +7,7 @@ export const setDarkMode = function () {
     r.style.setProperty('--main-backgroundColor', "rgb(33,33,36)");
     r.style.setProperty('--main-color', 'lightgray');
     r.style.setProperty('--moon-display', 'none');
-    r.style.setProperty('--sun-display', 'inline-block');
+    r.style.setProperty('--sun-display', 'inline');
     r.style.setProperty('--darkLogo-display', 'inline');
     r.style.setProperty('--lightLogo-display', 'none');
     r.style.setProperty('--body-backgroundColor', 'rgb(22,22,24)');
@@ -19,7 +19,7 @@ export const setLightMode = function () {
     let r = document.querySelector(':root');
     r.style.setProperty('--main-backgroundColor', 'white');
     r.style.setProperty('--main-color', 'black');
-    r.style.setProperty('--moon-display', 'inline-block');
+    r.style.setProperty('--moon-display', 'inline');
     r.style.setProperty('--sun-display', 'none');
     r.style.setProperty('--darkLogo-display', 'none');
     r.style.setProperty('--lightLogo-display', 'inline');
