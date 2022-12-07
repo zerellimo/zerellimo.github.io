@@ -13,62 +13,39 @@
     <link rel="stylesheet" href="./resources/style.css">
     <script type="module" src="./resources/modules/dark.js"></script>
 </head>
-
 <body>
-
     <div class="body-container">
-
         <header>
-
             <div class="header-container">
-
-                <div class="title flex-container ">
-                    <h1 class="logo"><a href="/">👨🏻‍💻</a></h1>
-                    <h1 class="text-title"><a href="/">Moez Ezzerelli</a></h1>
-                </div>
-
-
                 <nav>
-
                     <ul>
+                        <li class="logo"><a href="/">👨🏻‍💻</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./about-me.html">About Me</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
-
+                </nav>
+                <div class="buttons">
                     <button id="sun" class="dm-button prevent-select">☽</button>
                     <button id="moon" class="dm-button prevent-select">☼</button>
-
-                </nav>
-
-            </div>
-                
-        </header>
-
-        <main>
-    
-            <section id="about-me" >
-                
-                <h2>About Me</h2>
-
-                <div class="flex-container">
-
-                    <div class="text">
-                        <p>I hold a <strong>master's degree</strong> in <i>Electronics, Energy, Systems</i> engineering from Polytech Paris-Saclay.</p>
-                        <p>After a working experience in the automotive industry writing code for driver assistance systems, I decided to switch gears and hop on a new journey to develop for the web.
-                        </p>
-                        <p>I like photography and electronic music.</p>
-                        <p>You can download my <strong>resume</strong> <a download="CV_Moez_Ezzerelli" href="./resources/pdf/CV_Ezzerelli_onGitHub.pdf" class="download-link">here</a>.</p>
-                    </div>
-        
-                    <div class="image">
-                        <img class="me" src="./resources/images/me.jpg">
-                    </div>
-
                 </div>
-
-            </section>
-    
+            </div>
+        </header>
+        <main>
+            <div class="main-container">
+                <article>
+                    <div class="flex-container">
+                        <section class="text">
+                            <h2>About Me</h2>
+                            <p>I hold a <strong>master's degree</strong> in <i>Electronics, Energy, Systems</i> engineering from Polytech Paris-Saclay. After a working experience in the automotive industry writing code for driver assistance systems, I decided to switch gears and hop on a new journey to develop for the web. I like photography and electronic music.</p>
+                            <p>Download my <a download="CV_Moez_Ezzerelli" href="./resources/pdf/CV_Ezzerelli_onGitHub.pdf" class="download-link">resume</a>.</p>
+                        </section>
+                        <section class="image">
+                            <img src="./resources/images/me.jpg">
+                        </section>
+                    </div>
+                </article>
+            </div>
         </main>
     
         <footer>

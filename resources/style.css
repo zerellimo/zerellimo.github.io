@@ -1,15 +1,6 @@
-/* Generic */
-
-/*
-
-* {
-    border: 1px solid gainsboro;
-}
-
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
 
     /* Color Palette */
@@ -35,47 +26,61 @@
     --darkLogo-display: none;
 
     --body-backgroundColor: rgb(232, 232, 232);
+    --max-width: 80rem;
+    --line-height: 2rem;
+    --padding : 1.5rem;
 
 }
 
 html {
     font-size: 62.5%;  /*root size is now 10px */
-    font-family:sans-serif;
+    font-family: 'Jost', sans-serif;
     text-rendering: optimizeLegibility;
 }
 
-body {
-    font-size: 1.6rem;
-    background-color: var(--main-backgroundColor);
-    color: var(--main-color);
-    --max-width: 65rem;
-    --line-height: 2rem;
-    --padding : 1.5rem
+@media screen and (min-width: 750px) {
+    :root {
+        --padding: 3rem;
+    }
 }
 
+/* Generic */
+
 h1 {
-    font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.6rem;
+    font-weight: 900;
 }
 
 h2 {
-    font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.4rem;
+    font-weight: 700;
+    font-style: italic;
     margin-bottom: 1rem;
 }
 
+h2:last-child {
+    margin-bottom: 0;
+}
+
 h3 {
-    font-family: 'Racing Sans One', Georgia, serif;
     font-size: 2.0rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    border-bottom: solid 0.01rem var(--main-color);
-    padding: 0.8rem 0.1rem
+}
+
+h3:last-child {
+    margin-bottom: 0;
 }
 
 p {
     font-size: 1.6rem;
     line-height: var(--line-height);
     margin-bottom: 0.7rem;
+    max-width: 45rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 a {
@@ -95,7 +100,7 @@ a:visited {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -116,30 +121,75 @@ ul {
     margin-bottom: 0.7rem;
 }
 
-/* Body */
+ul:last-child {
+    margin-bottom: 0;
+}
 
-.body-container {
+/* Structure */
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--body-backgroundColor);
+    color: var(--main-color);
+}
+
+div.body-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* 100% of viewport */
-    background-color: var(--body-backgroundColor);
+    gap: 2rem;
 }
 
 @media (max-width:515px) {
     .body-container {
         min-height: 100svh; /* 100% of viewport (s for small as in smallest initial height, better for mobile ui */
+        gap: 0rem;
     }
 }
 
-/* Header and navigation */
-
-header {
-    background-color: var(--main-backgroundColor);
+div.header-container {
+    max-width: var(--max-width);
     margin-bottom: var(--padding);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 0.01rem solid black;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--padding);
+    padding: var(--padding);
+    justify-content: space-between;
+}
+
+div.main-container {
+    padding: var(--padding);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+div.footer-container {
+    padding: var(--padding);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--padding);
+}
+
+/* header */
+
+nav {
+    display: flex;
+    gap: 1.8rem;
+    align-items:center;
+}
+
+div.buttons {
+    display: flex;
+    align-items: center;
+    gap: var(--padding);
 }
 
 header a {
@@ -158,24 +208,6 @@ header a:visited {
     }
 }
 
-.header-container {
-    margin: 0 auto;
-    padding: var(--padding);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-    max-width: calc(var(--max-width) + var(--padding)*2);
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    gap: 1.8rem;
-    align-items:center;
-}
-
 nav ul {
     display: flex;
     flex-wrap: nowrap;
@@ -185,26 +217,23 @@ nav ul {
     font-size: 1.6rem;
 }
 
-.dm-button {
-    background-color: var(--body-backgroundColor);
+button.dm-button {
+    background-color: var(--main-backgroundColor);
     color: var(--main-color);
     font-size: 1.4rem;
     border: transparent;
     border-radius: 1.5rem;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 @media (hover:hover) {
-
-    .dm-button:hover {
+    button.dm-button:hover {
         cursor: pointer;
     }
 }
 
-
-
-.prevent-select {
+a.prevent-select {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
@@ -218,34 +247,12 @@ nav ul {
     display: var(--moon-display);
 }
 
-.text-title a {
-    color: var(--main-color);
-}
-
-.text-title a:hover {
-    text-decoration: none;
-}
-
-.text-title a:visited {
-    color: var(--main-color);
-}
-
 @media (max-width: 560px) {
-    .header-container {
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
 
     nav ul {
         font-size: 1.5rem;
-    }
-
-    .text-title {
-        display: none;
-    }
-
-    .logo {
-        display: inline;
+        display: flex;
+        gap: 1.5rem;
     }
 
     nav {
@@ -253,88 +260,71 @@ nav ul {
     }
 }
 
-@media(max-width: 320px) {
+/* main */
 
-    nav ul {
-        font-size: 1.4rem;
-        gap: 1.2rem;
-    }
-
-    nav {
-        gap: 1.2rem;
-    }
-
-}
-
-/* Main */
-
-main {
-    justify-content: center;
+article {
     display: flex;
-    gap: 3rem;
-    padding: 0 var(--padding) var(--padding) var(--padding);
-}
-    
-section {
-    flex-basis: var(--max-width);
-    padding: var(--padding);
-    background-color: var(--main-backgroundColor);
-    border-radius: 2rem;
+    flex-direction: column;
+    gap: var(--padding);
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 2rem;
+section.text {
+    flex-grow: 5;
 }
 
-.image {
-    flex-basis: 20rem;
-    flex-grow: 1;
+section.text.banner {
     align-self: center;
 }
 
-.text {
-    flex-basis: 32rem;
-    flex-grow: 3;
-}
-
-.me {
-    border-radius: 1.5rem;
-}
-
-/*
-article, .frame {
-    background-color: var(--article-backgroundColor);
+section.card {
+    border-radius: 2rem;
+    background-color: var(--main-backgroundColor);
     padding: var(--padding);
+    flex-basis: 30rem;
+    flex-grow: 1;
 }
-*/
 
-.list-level-1 {
+section.card.center {
+    text-align: center;
+}
+
+section.text.banner {
+    flex-grow: 1;
+}
+
+section.card.banner {
+    align-self: center;
+    flex-basis: 15rem;
+    flex-grow: 1;
+}
+
+div.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding);
+    justify-content: space-between;
+}
+
+section.image {
+    overflow: hidden;
+    justify-self: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 15rem;
+}
+
+section.image img {
+    border-radius: 2rem;
+}
+
+ul.list-level-1 {
     padding-left: 1.8rem;
     list-style-type: disc;
 }
 
-.list-level-2 {
+ul.list-level-2 {
     padding-left: 2rem;
     list-style-type: square;
-}
-
-#projects .image {
-    display: none;
-}
-
-#contact .image {
-    display: none;
-}
-
-.banner-quote {
-    color: var(--main-color);
-    text-align: center;
-    padding: 2rem 1rem;
-    max-width: 40rem;
-    margin: 0 auto;
 }
 
 #quote {
@@ -344,37 +334,17 @@ article, .frame {
     display: none;
 }
 
-/* --- Footer --- */
+/* footer */
 
-footer {
-    background-color: var(--main-backgroundColor);
-    margin-top: auto;
-    display: flex;
-    min-height:fit-content;
-    align-items: center;
-}
-
-.footer-container {
-    margin: 0 auto;
-    padding: var(--padding);
-    display: flex;
-    gap: 2.5rem;
-    max-width: var(--max-width);
-    min-height: 3.5rem;
-    flex-direction: row;
-    align-items:center;
-    /*border-top: 0.01rem solid black;*/
-}
-
-.external-logo {
+img.external-logo {
     height: 2.5rem;
     width: auto;
 }
 
-.GitHubLight {
+a.GitHubLight {
     display: var(--lightLogo-display);
 }
 
-.GitHubDark {
+a.GitHubDark {
     display: var(--darkLogo-display);
 }

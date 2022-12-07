@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    
     <meta charset="utf-8">
     <title>Moez Ezzerelli</title>
     <meta name="description" content="Personal portfolio site">
@@ -13,104 +11,74 @@
     <link rel="stylesheet" href="./resources/reset.css">
     <link rel="stylesheet" href="./resources/style.css">
     <script type="module" src="./resources/modules/dark.js"></script>
-
 </head>
-
 <body>
-
     <div class="body-container">
-
         <header>
-
             <div class="header-container">
-
-                <div class="title flex-container ">
-                    <h1 class="logo"><a href="/">👨🏻‍💻</a></h1>
-                    <h1 class="text-title"><a href="/">Moez Ezzerelli</a></h1>
-                </div>
-
-
                 <nav>
-
                     <ul>
+                        <li class="logo"><a href="/">👨🏻‍💻</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./about-me.html">About Me</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
-
+                </nav>
+                <div class="buttons">
                     <button id="sun" class="dm-button prevent-select">☽</button>
                     <button id="moon" class="dm-button prevent-select">☼</button>
-
-                </nav>
-
+                </div>
             </div>
-                
         </header>
-
         <main>
-
-            <section>
-
-                <h2>Hi, I'm Moez!</h2>
-
-                <div class="flex-container">
-
-                    <div class="text">
-                        <p>Welcome to my portfolio site.</p>
-
-                        <br>
-
-                        <p>I am a software engineer specializing in <strong>front-end developement</strong>.</p>
-
-                        <br>
-
-                        <p>Here, you can:</p>
-                        <ul>
-                                <li>💽 Check out my <a href="./projects.html">projects</a></li>
-                                <li>🧔🏻‍♂️ Learn more <a href="./about-me.html">about me</a></li>
-                                <li>✨ Refresh the page for a new quote!</li>
-                        </ul>
+            <div class="main-container">
+                <article>
+                    <div class="flex-container">
+                        <section class="text banner">
+                            <h2>Hi, I'm Moez!</h2>
+                            <br>
+                            <p>Welcome to my portfolio site.</p>
+                            <br>
+                            <p>I am a software engineer specializing in <strong>front-end developement</strong>.</p> 
+                            <br>
+                            <p>Here, you can:</p>
+                                <ul>
+                                    <li>💽 Check out my <a href="./projects.html">projects</a></li>
+                                    <li>🧔🏻‍♂️ Learn more <a href="./about-me.html">about me</a></li>
+                                    <li>✨ Refresh the page for a new quote!</li>
+                                </ul>
+                        </section>
+                        <section class="card center banner">
+                            <p id="quote">"This is a quote." - Author</p>
+                        </section>
                     </div>
 
-                </div>
-
-                <br>
-
-                <div class="banner-quote">
-                    <span id="quote">"This is a quote." - Author</span>
-                </div>
-
-            </section>
-    
+                </article>
+            </div>
         </main>
-    
         <footer>
             <div class="footer-container">
                 <div>
-                    <a class="external-link GitHubDark" target="_blank" alt="GitHub" title="GitHub" href="https://github.com/zerellimo">
+                    <a class="GitHubDark" target="_blank" alt="GitHub" title="GitHub" href="https://github.com/zerellimo">
                         <img class="external-logo" src="./resources/images/GitHub-Mark-Light-120px-plus.png">
                     </a>
-                    <a class="external-link GitHubLight" target="_blank" alt="GitHub" title="GitHub" href="https://github.com/zerellimo">
+                    <a class="GitHubLight" target="_blank" alt="GitHub" title="GitHub" href="https://github.com/zerellimo">
                         <img class="external-logo" src="./resources/images/GitHub-Mark-120px-plus.png">
                     </a>
                 </div>
                 <div>
-                    <a class="external-link" target="_blank" alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/zerellimo/">
+                    <a target="_blank" alt="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/zerellimo/">
                         <img class="external-logo" src="./resources/images/LI-In-Bug.png">
                     </a>
                 </div>
                 <div>
-                    <a class="external-link" target="_blank" alt="Codecademy" title="Codecademy" href="https://www.codecademy.com/profiles/zerellimo/">
+                    <a target="_blank" alt="Codecademy" title="Codecademy" href="https://www.codecademy.com/profiles/zerellimo/">
                         <img class="external-logo" src="./resources/images/codecademy_logo_icon_167734.png">
                     </a>
                 </div>
             </div>
         </footer>
-
     </div>
-
     <script type="module" src="./resources/script.js" async defer></script>
-
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Moez Ezzerelli</title>
@@ -13,53 +12,34 @@
     <link rel="stylesheet" href="./resources/style.css">
     <script type="module" src="./resources/modules/dark.js"></script>
 </head>
-
 <body>
-
     <div class="body-container">
-
         <header>
-
             <div class="header-container">
-
-                <div class="title flex-container ">
-                    <h1 class="logo"><a href="/">👨🏻‍💻</a></h1>
-                    <h1 class="text-title"><a href="/">Moez Ezzerelli</a></h1>
-                </div>
-
-
                 <nav>
-
                     <ul>
+                        <li class="logo"><a href="/">👨🏻‍💻</a></li>
                         <li><a href="./projects.html">Projects</a></li>
                         <li><a href="./about-me.html">About Me</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
-
+                </nav>
+                <div class="buttons">
                     <button id="sun" class="dm-button prevent-select">☽</button>
                     <button id="moon" class="dm-button prevent-select">☼</button>
-
-                </nav>
-
+                </div>
             </div>
-                
         </header>
-        
+
         <main>
-
-            <section id="projects">
-
-                <h2>Projects</h2>
-
-                <div class="flex-container">
-
-                    <div class="text">
-                        
+            <div class="main-container">
+                <article>
+                    <section class="text">
+                        <h2>Projects</h2>
                         <p>Developed as part of my <a target="_blank" href="https://www.codecademy.com/profiles/zerellimo">Codecademy</a><i> Front-End Engineer Career Path.</i></p>
-                        
-                        <br>
-
-                        <article>
+                    </section>
+                    <div class="flex-container">
+                        <section class="card">
                             <h3>zerellimo.github.io</h3>
                             <p>Portfolio website built in vanilla <strong>HTML/CSS/JS</strong>.</p>
                             <p>Key features:</p>
@@ -77,11 +57,8 @@
                                 </li>
                             </ul>
                             <p>Source code: <a class="external-link" target="_blank" href="https://github.com/zerellimo/zerellimo.github.io">GitHub</a></p>
-                        </article>
-
-                        <br>
-    
-                        <article>
+                        </section>
+                        <section class="card">
                             <h3>Find Your Hat</h3>
                             <p>A node terminal maze-solving game.</p>
                             <p>Main takeaways:</p>
@@ -92,18 +69,10 @@
                             </ul>
                             <p>Source code: <a class="external-link" target="_blank" href="https://github.com/zerellimo/FindYourHat">GitHub</a></p>
                             <p>Package: <a class="external-link" target="_blank" href="https://www.npmjs.com/package/@zerellimo/findyourhat">npm</a></p>
-                        </article>
-                        
+                        </section>
                     </div>
-
-                    <div class="image">
-                        <img src="./resources/images/htmlcssjs.png">
-                    </div>
-        
-                </div>
-                
-            </section>
-    
+                </article>
+            </div>
         </main>
     
         <footer>
