@@ -222,9 +222,10 @@ button.dm-button {
     color: var(--main-color);
     font-size: 1.4rem;
     border: transparent;
-    border-radius: 1.5rem;
-    height: 3rem;
-    width: 3rem;
+    border-radius: 2rem;
+    height: 3.5rem;
+    width: 3.6rem;
+    text-align: center;
 }
 
 @media (hover:hover) {
