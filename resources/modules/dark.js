@@ -4,26 +4,26 @@ let theme = localStorage.getItem("theme");
 
 export const setDarkMode = function () {
     let r = document.querySelector(':root');
-    r.style.setProperty('--main-backgroundColor', "rgb(33,33,36)");
-    r.style.setProperty('--main-color', 'lightgray');
+    r.style.setProperty('--color', 'lightgray');
+    r.style.setProperty('--backgroundColor', 'rgb(22,22,24)');
+    r.style.setProperty('--card-backgroundColor', "rgb(33,33,36)");
     r.style.setProperty('--moon-display', 'none');
     r.style.setProperty('--sun-display', 'inline');
     r.style.setProperty('--darkLogo-display', 'inline');
     r.style.setProperty('--lightLogo-display', 'none');
-    r.style.setProperty('--body-backgroundColor', 'rgb(22,22,24)');
     let theme = localStorage.getItem("theme");
     localStorage.setItem("theme", "dark");
 }
 
 export const setLightMode = function () {
     let r = document.querySelector(':root');
-    r.style.setProperty('--main-backgroundColor', 'white');
-    r.style.setProperty('--main-color', 'black');
+    r.style.setProperty('--color', 'black');
+    r.style.setProperty('--backgroundColor', 'rgb(232, 232, 232)');
+    r.style.setProperty('--card-backgroundColor', 'white');
     r.style.setProperty('--moon-display', 'inline');
     r.style.setProperty('--sun-display', 'none');
     r.style.setProperty('--darkLogo-display', 'none');
     r.style.setProperty('--lightLogo-display', 'inline');
-    r.style.setProperty('--body-backgroundColor', 'rgb(232, 232, 232)');
     let theme = localStorage.getItem("theme");
     localStorage.setItem("theme", "light");
 }
